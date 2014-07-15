@@ -1,0 +1,33 @@
+﻿*{margin:0px; padding:0px;}
+img{border:0px;}
+
+body{font-family:tahoma,'Hiragino Sans GB','microsoft yahei',sans-serif;}
+.main-width{max-width:1450px;}
+.main{max-width:1450px; position:relative;}
+.center-block{ display:block; margin:0 auto;}
+.mgTa{margin-top:8px;}
+
+/*Static navbar*/
+.myHeadnavbar{background-color:#5e5e5e; min-height:0px; border:0px;border-radius:0px; margin:0px;}
+.myHeadnavbar .navbar-nav>li>a{color:#ccc; padding:5px 15px;}
+.myHeadnavbar .navbar-nav>li>a:hover{color:#fff; background-color:transparent;}
+.myHeadnavbar .navbar-toggle{color:#fff; margin:4px 0px; padding:0px 20px 0px 10px;}
+
+#navlist ul{margin:0px;}
+#navlist ul li{ text-align:center;}
+.myHeadnavbar .navbar-collapse{background-color:#777;padding:0px;}
+.myHeadnavbar .navbar-collapse li{border-bottom:1px solid #858585;}
+
+
+.header{background-color:#fff; padding-top:15px; padding-bottom:12px; margin-bottom:15px; -webkit-box-shadow:0 2px 5px rgba(0,0,0,.17); -moz-box-shadow:0 2px 5px rgba(0,0,0,.17);box-shadow:0 2px 5px rgba(0,0,0,.17);}
+.header .form-control{width:240px;}
+.header .btn-redirect{background-color:#e46365; border-color:#e46365; color:#fff; margin-left:-5px; border-top-left-radius:0px; border-bottom-left-radius:0px;}
+.header .btn-default{background:#f7f7f7; border-color:#ebebeb;}
+.header .btn-default .glyphicon{color:#e46365;}
+.header .hd_btn>:first-child{margin-right:10px;}
+
+/*home*/
+.myhomeleft{position:fixed;}
+.myhomeL_logo{height:42px; width:130px; background-color:#fcc;}
+.myhomeL_nav{width:130px; height:200px; background-color:#fcc; margin-top:20px;}
+
