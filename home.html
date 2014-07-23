@@ -60,24 +60,108 @@
     </div>
     
     <div class="main center-block container-fluid">
-        <!--左边-->
-        <div class="hidden-sm hidden-xs">
-            <div class="myhomeL_logo"><a href="javascript:;">logo</a></div>
-            <div class="myhomeL_nav">
-            
-            </div>
-        </div>
         <div class="row">
-            <div class="col-md-9">
-                sdfdfsdf
+            <div class="col-lg-9 clearfix" style="border:1px solid #f00;">
+                <!--左边-->
+                <div class="hidden-sm hidden-xs hidden-md pull-left" id="myhomeleft">
+                    <div id="myhomeleftLogo" class="myhomeL_logo" style="display:none;"><a href="javascript:;">logo</a></div>
+                    <div class="myhomeL_nav">
+            
+                    </div>
+                </div>
+                <!--middle-->
+                <div id="myhomemain">
+                    <div style="background-color:#f5f5f5; height:250px;"></div>
+                    <div id="myhomemainnav">
+                        <ul class="myhomemiddlnav clearfix"><li>第一个</li><li>第二个</li></ul>
+                    </div>
+                    <div>
+                        <p>内容</p>
+                        <p>你好多级of就送大家放松的积分送房间送到附近的时间佛山多家分店实际房价松动房价松动你
+                        好多级of就送大家放松的积分送房间送到附近的时间佛山多家分店实际房价松动房价松动你好多级
+                        of就送大家放松的积分送房间送到附近的时间佛山多家分店实际房价松动房价松动你好多级of就送
+                        大家放松的积分送房间送到附近的时间佛山多家分店实际房价松动房价松动，撒旦发射点发</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">8分钟前 发表于 城市休闲鞋 热度：41° 收藏 评论</div>
+            <div class="col-lg-3" style="border:1px solid #fcc;">
+                <div id="myhomeright1" style="border:1px solid #000;">
+                    <div style="background:#fcc; margin-bottom:20px; height:200px;"></div>
+                    <div style="background:#fcc; margin-bottom:20px; height:200px;"></div>
+                    <div style="background:#fcc; margin-bottom:20px; height:200px;"></div>
+                    <div style="background:#fcc; margin-bottom:20px; height:200px;"></div>
+                    <div style="background:#fcc; margin-bottom:20px; height:200px;"></div>
+                </div>
+                <div class="hidden-sm hidden-xs hidden-md" id="myhomeleft2" style="background:#f00; height:300px; width:200px;">
+                    
+                </div>
+            </div>
         </div>
     </div>  
 
     
 
     <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script> 
+    <script type="text/javascript">
+        (function ($) {
+            var winWidth = $(window).width();
+            if (winWidth > 1182) {
+                $("#myhomemain").attr("style", "margin-left:160px");
+            }
+            else {
+                $("#myhomemain").attr("style", "margin-left:0px");
+            }
+        })(jQuery);
+
+        //当窗口大小改变时（或改变后）
+        $(window).resize(function () {
+            var winWidth = $(window).width();
+            if (winWidth > 1182) {
+                $("#myhomemain").attr("style", "margin-left:160px");
+            }
+            else {
+                $("#myhomemain").attr("style", "margin-left:0px");
+            }
+            $("#myhomemainnav").css("width", $("#myhomemain").width());
+        });
+
+        //在页面滚动时触发
+        $(window).scroll(function () {
+            var mainrightmain = $("#myhomeright1").height() + 120;
+            var scrolltop = 0;
+            if (document.documentElement && document.documentElement.scrollTop) {
+                scrolltop = document.documentElement.scrollTop;
+            } else if (document.body) {
+                scrolltop = document.body.scrollTop;
+            }
+
+            if (scrolltop > 99) {
+                $("#myhomeleft").attr("style", "position:fixed;top:5px");
+                $("#myhomeleftLogo").attr("style", "-moz-animation:animations 0.3s ease forwards;-webkit-animation:animations 0.3s ease forwards;-o-animation:animations 0.3s ease forwards;-ms-animation:animations 0.3s ease forwards;animation:animations 0.3s ease forwards;")
+                $("#myhomeleftLogo").show();
+
+                if (scrolltop > 389) {
+                    $("#myhomemainnav").attr("style", "position:fixed;top:0px");
+                    $("#myhomemainnav").css("width", $("#myhomemain").width());
+                }
+                else {
+                    $("#myhomemainnav").attr("style", "");
+                }
+
+                if (scrolltop > mainrightmain) {
+                    $("#myhomeleft2").attr("style", "position:fixed;top:0px; width:200px;background:#f00; height:300px;");
+                }
+                else {
+                    $("#myhomeleft2").attr("style", "background:#f00; width:200px; height:300px;");
+                }
+            }
+            else {
+                $("#myhomeleft").attr("style", "");
+                $("#myhomeleftLogo").attr("style", "");
+                $("#myhomeleftLogo").hide();
+            }
+        });
+    </script>
 </body>
 </html>
